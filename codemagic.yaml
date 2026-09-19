@@ -1,0 +1,18 @@
+name: EstudoRecompensa
+
+workflows:
+  gerar-apk:
+    name: Gerar APK Completo
+    max_build_duration: 20
+    instance_type: mac_mini_m2
+    environment:
+      flutter: stable
+    scripts:
+      - name: Limpar e Preparar
+        script: |
+          flutter clean
+          flutter pub get
+      - name: Compilar APK
+        script: flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
