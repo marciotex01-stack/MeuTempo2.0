@@ -2,10 +2,9 @@
     package="com.estudorecompensa.app">
 
     <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
-        tools:ignore="ProtectedPermissions" />
+        tools:ignore="ProtectedPermissions"
+        xmlns:tools="http://schemas.android.com/tools" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:label="Estudo Recompensa"
@@ -27,7 +26,7 @@
             </intent-filter>
         </activity>
 
-        <!-- ✅ ESSA LINHA RESOLVE O ERRO DE UMA VEZ POR TODAS! -->
+        <!-- ✅ LINHA OBRIGATÓRIA — SEM ELA DÁ O ERRO! -->
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
